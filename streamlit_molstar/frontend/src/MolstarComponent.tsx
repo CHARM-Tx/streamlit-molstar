@@ -33,6 +33,7 @@ class MolstarComponent extends StreamlitComponentBase<State> {
     const height = this.props.args["height"]
     const modelFile = this.props.args["modelFile"]
     const trajFile = this.props.args["trajFile"]
+    const modelFiles = this.props.args["modelFiles"]
 
     if (modelFile && modelFile.data) {
       modelFile.data = this.props.args["modelFile_data"]
@@ -40,11 +41,18 @@ class MolstarComponent extends StreamlitComponentBase<State> {
     if (trajFile && trajFile.data) {
       trajFile.data = this.props.args["trajFile_data"];
     }
+    if (modelFiles) {
+      for (let i = 0; i < modelFiles.length; i++) {
+        modelFiles[i].data = this.props.args["modelFiles_data"][i]
+      }
+    }
+
     return (
       <div style={{ height: height }}>
         <MyFullScreen>
           <Molstar
             modelFile={modelFile}
+            modelFiles={modelFiles}
             trajFile={trajFile}
             showExpand={false}
             showAnimation={true}
