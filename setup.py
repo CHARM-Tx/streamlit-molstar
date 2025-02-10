@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='streamlit-molstar',
-    version='0.4.21',
-    author='mapix',
-    author_email='mapix.me@gmail.com',
+    name='ch-st-molstar',
+    version='0.0.2',
+    author='doubleone44',
+    author_email='mees@charmtx.com',
     packages=find_packages(),
     include_package_data=True,
     install_requires=['streamlit', 'mrcfile', 'numpy'],
-    url='https://github.com/pragmatic-streamlit/streamlit-molstar',
+    url='https://github.com/Charm-Tx/streamlit-molstar',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     classifiers=[
