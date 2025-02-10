@@ -179,6 +179,7 @@ def st_molstar_remote(url, traj_url=None, height="240px", key=None):
 if (not _RELEASE) or os.getenv("SHOW_MOLSTAR_DEMO"):
     import streamlit as st
 
+    st.set_page_config(layout="wide")
     # st_molstar('examples/cluster_400.gro', key="li_test")
 
     # st_molstar_rcsb('1LOL', key='xx')
@@ -190,4 +191,4 @@ if (not _RELEASE) or os.getenv("SHOW_MOLSTAR_DEMO"):
     # st_molstar('../examples/complex.pdb', '../examples/complex.xtc', key='4')
     # st_molstar("../pchem/polyALA.pdb", "../pchem//polyALA_traj.dcd", key="10")
     # st_molstar_remote("http://localhost:8000/polyALA.pdb", "http://localhost:8000/polyALA_traj.dcd")
-    st_molstar_multiple(['examples/complex.pdb', "examples/H2O.cif"], key='8')
+    st_molstar_multiple(["examples/cluster_400.gro", "examples/cluster_of_100.gro"], key='8', height="800px")
